@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 namespace test_autoquery.plugins
 {
-    public class XmlSerializerFormat : IPlugin
+    public class MyXmlSerializerFormat : IPlugin
     {
         public static void Serialize(IRequest req, object response, Stream stream)
         {

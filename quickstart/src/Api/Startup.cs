@@ -38,6 +38,7 @@ namespace Api
                     };
                 });
 
+            // 跨域设置  cors处理方案
             services.AddCors(options =>
             {
                 // this defines a CORS policy called "default"

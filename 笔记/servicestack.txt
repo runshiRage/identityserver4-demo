@@ -1,0 +1,17 @@
+servicestack 请求的路径：
+1. 在反序列化DTO之前，会执行IAppHost.PreRequestFilters
+2. 反序列化DTO （将请求参数绑定到DTO的过程）
+
+3. 执行任何请求转换器
+4. 执行优先级<0的请求过滤器属性
+5. 执行所有全局请求过滤器
+6. 执行优先级> = 0的请求过滤器属性
+
+7. 动作过滤器 （action filters）
+
+8. 执行任何响应转换器
+9. 执行优先级<0的响应过滤器属性
+10. 执行所有全局响应过滤器
+11. 执行优先级> = 0的响应过滤器属性
+
+12. 请求的末尾触发IAppHost.OnEndRequest和任何IAppHost.OnEndRequestCallbacks

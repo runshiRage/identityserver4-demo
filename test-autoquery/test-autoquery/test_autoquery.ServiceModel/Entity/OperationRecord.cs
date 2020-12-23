@@ -15,4 +15,13 @@ namespace test_autoquery.ServiceModel.Entity
         public int? Status { get; set; }
         public string Remark { get; set; }
     }
+
+    public class RockstarAlbum 
+    {
+        public int? Id { get; set; }         // Primary Key | Range Key
+        public int? RockstarId { get; set; } // Foreign key | Hash Key
+        public string Name { get; set; }
+        public string Genre { get; set; }
+        public int[] IdBetween { get; set; }
+    }
 }
